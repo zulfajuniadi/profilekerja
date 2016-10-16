@@ -51,6 +51,28 @@
     .clickable {
         cursor: pointer
     }
+    .ripple{
+        position: relative;
+        overflow:hidden;
+    }
+    .ripple-effect{
+        position: absolute;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: white;
+        animation: ripple-animation 2s;
+    }
+    @keyframes ripple-animation {
+        from {
+          transform: scale(1);
+          opacity: 0.4;
+        }
+        to {
+          transform: scale(100);
+          opacity: 0;
+        }
+    }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -74,7 +96,7 @@
             <hr>
             <div class="row" ng-repeat="occupations in occupations | chunk:4">
                 <div class="col-md-3" ng-repeat="occupation in occupations | filter:{ name: search }">
-                    <div class="panel panel-primary clickable" ui-sref="occupation({slug: occupation.slug})">
+                    <div class="panel panel-primary clickable ripple" ui-sref="occupation({slug: occupation.slug})">
                         <div class="panel-heading">
                             @{{occupation.duties.length}} Duties
                         </div>
@@ -111,7 +133,7 @@
                 <div class="col-md-10">
                     <div class="row" ng-repeat="tasks in duty.tasks | chunk:4">
                         <div class="col-md-3" ng-repeat="task in tasks | filter: { name: search }">
-                            <div ui-sref="task({occupation_slug: occupation.slug, task_slug: task.slug})" class="panel clickable" ng-class="{'panel-info': (task.level.level == 'L1'),'panel-warning': (task.level.level == 'L2'),'panel-danger': (task.level.level == 'L3')}">
+                            <div ui-sref="task({occupation_slug: occupation.slug, task_slug: task.slug})" class="panel clickable ripple" ng-class="{'panel-info': (task.level.level == 'L1'),'panel-warning': (task.level.level == 'L2'),'panel-danger': (task.level.level == 'L3')}">
                                 <div class="panel-heading">
                                     @{{task.code}}
                                     <span class="label pull-right" ng-class="{'label-info': (task.level.level == 'L1'),'label-warning': (task.level.level == 'L2'),'label-danger': (task.level.level == 'L3')}">
@@ -269,6 +291,27 @@
             });
             $urlRouterProvider.otherwise('/occupations');
         })
+        $(document).on('click', '.ripple', function (event) {
+            event.preventDefault();
+            var $div = $('<div/>'),
+            btnOffset = $(this).offset(),
+            xPos = event.pageX - btnOffset.left,
+            yPos = event.pageY - btnOffset.top;
+            $div.addClass('ripple-effect');
+            var $ripple = $(".ripple-effect");
+            $ripple.css("height", $(this).height());
+            $ripple.css("width", $(this).height());
+            $div
+            .css({
+                top: yPos - ($ripple.height()/2),
+                left: xPos - ($ripple.width()/2),
+                background: '#337ab7'
+            })
+            .appendTo($(this));
+            window.setTimeout(function(){
+                $div.remove();
+            }, 2000);
+        });
     </script>
 </body>
 </html>
