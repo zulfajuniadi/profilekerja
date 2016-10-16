@@ -19,7 +19,7 @@
                                     <div class="panel-heading">
                                         {{$duty->code}}
                                     </div>
-                                    <div class="panel-body">
+                                    <div class="panel-body same-height">
                                         <a href="{{action('DutiesController@show', ['occupation' => $occupation->getSlug(), 'duty' => $duty->getSlug()])}}">{{$duty->name}}</a>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                                                     {{$task->level->level}}
                                                 </span>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="panel-body same-height">
                                                 <a href="{{action('TasksController@show', ['duties' => $duty->getSlug(), 'tasks' => $task->slug])}}">
                                                     {{$task->name}}
                                                 </a>
@@ -85,5 +85,13 @@
 @section('scripts')
 <script type="text/javascript">
     $('[data-toggle="tooltip"]').tooltip();
+    var height = 60;
+    $('.same-height').each(function(index, el){
+        if ($(el).height() > height)
+            height = $(el).height();
+    });
+    $('.same-height').each(function(index, el){
+        $(el).height(height);
+    });
 </script>
 @endsection

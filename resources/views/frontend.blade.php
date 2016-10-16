@@ -48,6 +48,14 @@
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <style type="text/css">
+    .panel-body b {
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 8px;
+    }
+    .panel-body .col-md-4:first-child b {
+        margin-top: 0px;
+    }
     .clickable {
         cursor: pointer
     }
@@ -100,7 +108,7 @@
                         <div class="panel-heading">
                             @{{occupation.duties.length}} Duties
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body" max-height>
                             @{{occupation.name}}
                         </div>
                     </div>
@@ -140,7 +148,7 @@
                                         @{{task.level.level}}
                                     </span>
                                 </div>
-                                <div class="panel-body">
+                                <div class="panel-body" max-height>
                                     @{{task.name}}
                                 </div>
                             </div>
@@ -164,15 +172,15 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <b>Duty</b><br>
+                            <b>Duty</b>
                             @{{task.duty.name}}
                         </div>
                         <div class="col-md-4">
-                            <b>Code</b><br>
+                            <b>Code</b>
                             @{{task.code}}
                         </div>
                         <div class="col-md-4">
-                            <b>Level</b><br>
+                            <b>Level</b>
                             @{{task.level.level}}:
                             @{{task.level.name}}
                         </div>
@@ -181,7 +189,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <b>Performance Standard</b><br>
+                            <b>Performance Standard</b>
                             <div ng-bind-html="task.performance_standard | nl2br"></div>
                         </div>
                     </div>
@@ -189,15 +197,15 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <b>Subtasks</b><br>
+                            <b>Subtasks</b>
                             <div ng-bind-html="task.subtasks | nl2br"></div>
                         </div>
                         <div class="col-md-4">
-                            <b>Enabling Requirements</b><br>
+                            <b>Enabling Requirements</b>
                             <div ng-bind-html="task.enabling_requirement | nl2br"></div>
                         </div>
                         <div class="col-md-4">
-                            <b>Materials</b><br>
+                            <b>Materials</b>
                             <div ng-bind-html="task.materials | nl2br"></div>
                         </div>
                     </div>
@@ -218,6 +226,20 @@
     <script type="text/javascript" src="/home.js"></script>
     <script type="text/javascript">
     angular.module('app', ['ui.router', 'ngSanitize', 'nl2br'])
+        .directive('maxHeight', function(){
+            return {
+                link: function($scope, $elem) {
+                    var height = 60;
+                    $('.panel-body').each(function(index, el){
+                        if ($(el).height() > height)
+                            height = $(el).height();
+                    });
+                    $('.panel-body').each(function(index, el){
+                        $(el).height(height);
+                    });
+                }
+            }
+        })
         .filter('chunk', function () {
             function cacheIt(func) {
                 cache = {};
