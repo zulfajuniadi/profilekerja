@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'secretariats' => 'Secretariats',
+    'create_new_secretariat' => 'Cipta Secretariat Baru',
+    'create' => 'Cipta',
+    'edit' => 'Sunting',
+    'show' => 'Papar',
+    'revisions' => 'Pindaan',
+    'duplicate' => 'Gandakan',
+    'delete' => 'Padam',
+    'submit' => 'Hantar',
+    'list_all' => 'Senarai Semua',
+    'update_secretariat' => 'Sunting Secretariat: :name',
+    'view_revisions' => 'Lihat Pindaan Secretariat: :name',
+    'created_this' => 'Secretariat ini dicipta',
+    'changed_from_to' => 'Tukar ":field" dari ":from" ke ":to"',
+    'view_secretariat' => 'Lihat Secretariat: :name',
+    'created' => 'Secretariat :name dicipta',
+    'updated' => 'Secretariat :name diubah',
+    'deleted' => 'Secretariat :name dipadam',
+    'occupation_id' => 'Occupation',
+    'role' => 'Role',
+    'name' => 'Name',
+    'created_at' => 'Dicipta Pada',
+    'updated_at' => 'Perubahan Terakhir Pada',
+];

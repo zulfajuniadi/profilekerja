@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'secretariats' => 'Secretariats',
+    'create_new_secretariat' => 'Create New Secretariat',
+    'create' => 'Create',
+    'edit' => 'Edit',
+    'show' => 'Show',
+    'revisions' => 'Revisions',
+    'duplicate' => 'Duplicate',
+    'delete' => 'Delete',
+    'submit' => 'Submit',
+    'list_all' => 'List All',
+    'update_secretariat' => 'Update Secretariat: :name',
+    'view_revisions' => 'View Secretariat Revisions: :name',
+    'created_this' => 'Created this secretariat',
+    'changed_from_to' => 'Changed ":field" from ":from" to ":to"',
+    'view_secretariat' => 'View Secretariat: :name',
+    'created' => 'Secretariat :name created',
+    'updated' => 'Secretariat :name updated',
+    'deleted' => 'Secretariat :name deleted',
+    'occupation_id' => 'Occupation',
+    'role' => 'Role',
+    'name' => 'Name',
+    'created_at' => 'Created At',
+    'updated_at' => 'Last Updated At',
+];

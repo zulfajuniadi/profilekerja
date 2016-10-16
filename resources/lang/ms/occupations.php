@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'occupations' => 'Occupations',
+    'create_new_occupation' => 'Cipta Occupation Baru',
+    'create' => 'Cipta',
+    'edit' => 'Sunting',
+    'show' => 'Papar',
+    'revisions' => 'Pindaan',
+    'duplicate' => 'Gandakan',
+    'delete' => 'Padam',
+    'submit' => 'Hantar',
+    'list_all' => 'Senarai Semua',
+    'update_occupation' => 'Sunting Occupation: :name',
+    'view_revisions' => 'Lihat Pindaan Occupation: :name',
+    'created_this' => 'Occupation ini dicipta',
+    'changed_from_to' => 'Tukar ":field" dari ":from" ke ":to"',
+    'view_occupation' => 'Lihat Occupation: :name',
+    'created' => 'Occupation :name dicipta',
+    'updated' => 'Occupation :name diubah',
+    'deleted' => 'Occupation :name dipadam',
+    'name' => 'Name',
+    'created_at' => 'Dicipta Pada',
+    'updated_at' => 'Perubahan Terakhir Pada',
+];

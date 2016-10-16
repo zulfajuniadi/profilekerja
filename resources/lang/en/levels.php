@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'levels' => 'Levels',
+    'create_new_level' => 'Create New Level',
+    'create' => 'Create',
+    'edit' => 'Edit',
+    'show' => 'Show',
+    'revisions' => 'Revisions',
+    'duplicate' => 'Duplicate',
+    'delete' => 'Delete',
+    'submit' => 'Submit',
+    'list_all' => 'List All',
+    'update_level' => 'Update Level: :name',
+    'view_revisions' => 'View Level Revisions: :name',
+    'created_this' => 'Created this level',
+    'changed_from_to' => 'Changed ":field" from ":from" to ":to"',
+    'view_level' => 'View Level: :name',
+    'created' => 'Level :name created',
+    'updated' => 'Level :name updated',
+    'deleted' => 'Level :name deleted',
+    'occupation_id' => 'Occupation',
+    'level' => 'Level',
+    'name' => 'Name',
+    'created_at' => 'Created At',
+    'updated_at' => 'Last Updated At',
+];

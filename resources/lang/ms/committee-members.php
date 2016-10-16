@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'committee_members' => 'Committee Members',
+    'create_new_committee_member' => 'Cipta Committee Member Baru',
+    'create' => 'Cipta',
+    'edit' => 'Sunting',
+    'show' => 'Papar',
+    'revisions' => 'Pindaan',
+    'duplicate' => 'Gandakan',
+    'delete' => 'Padam',
+    'submit' => 'Hantar',
+    'list_all' => 'Senarai Semua',
+    'update_committee_member' => 'Sunting Committee Member: :name',
+    'view_revisions' => 'Lihat Pindaan Committee Member: :name',
+    'created_this' => 'Committee Member ini dicipta',
+    'changed_from_to' => 'Tukar ":field" dari ":from" ke ":to"',
+    'view_committee_member' => 'Lihat Committee Member: :name',
+    'created' => 'Committee Member :name dicipta',
+    'updated' => 'Committee Member :name diubah',
+    'deleted' => 'Committee Member :name dipadam',
+    'occupation_id' => 'Occupation',
+    'name' => 'Name',
+    'company' => 'Company',
+    'created_at' => 'Dicipta Pada',
+    'updated_at' => 'Perubahan Terakhir Pada',
+];

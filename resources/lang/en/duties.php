@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'duties' => 'Duties',
+    'create_new_duty' => 'Create New Duty',
+    'create' => 'Create',
+    'edit' => 'Edit',
+    'show' => 'Show',
+    'revisions' => 'Revisions',
+    'duplicate' => 'Duplicate',
+    'delete' => 'Delete',
+    'submit' => 'Submit',
+    'list_all' => 'List All',
+    'update_duty' => 'Update Duty: :name',
+    'view_revisions' => 'View Duty Revisions: :name',
+    'created_this' => 'Created this duty',
+    'changed_from_to' => 'Changed ":field" from ":from" to ":to"',
+    'view_duty' => 'View Duty: :name',
+    'created' => 'Duty :name created',
+    'updated' => 'Duty :name updated',
+    'deleted' => 'Duty :name deleted',
+    'occupation_id' => 'Occupation',
+    'code' => 'Code',
+    'name' => 'Name',
+    'created_at' => 'Created At',
+    'updated_at' => 'Last Updated At',
+];

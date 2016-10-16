@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'occupations' => 'Occupations',
+    'create_new_occupation' => 'Create New Occupation',
+    'create' => 'Create',
+    'edit' => 'Edit',
+    'show' => 'Show',
+    'revisions' => 'Revisions',
+    'duplicate' => 'Duplicate',
+    'delete' => 'Delete',
+    'submit' => 'Submit',
+    'list_all' => 'List All',
+    'update_occupation' => 'Update Occupation: :name',
+    'view_revisions' => 'View Occupation Revisions: :name',
+    'created_this' => 'Created this occupation',
+    'changed_from_to' => 'Changed ":field" from ":from" to ":to"',
+    'view_occupation' => 'View Occupation: :name',
+    'created' => 'Occupation :name created',
+    'updated' => 'Occupation :name updated',
+    'deleted' => 'Occupation :name deleted',
+    'name' => 'Name',
+    'created_at' => 'Created At',
+    'updated_at' => 'Last Updated At',
+];
