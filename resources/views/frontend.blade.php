@@ -197,7 +197,8 @@
             function cacheIt(func) {
                 cache = {};
                 return function(arg) {
-                    return cache[arg] ? cache[arg] : cache[arg] = func(arg);
+                    var key =  JSON.stringify(arg);
+                    return cache[key] ? cache[key] : (cache[key] = func(arg));
                 };
             }
             function chunk(items, chunk_size) {
