@@ -38,6 +38,9 @@
 	<meta property="og:locale" content="">
 	<meta property="og:audio" content="">
 	<meta property="og:video" content="">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<title>{{ app('config')->get('app.name') }}</title>
 
 	<link rel="stylesheet" href="{{ elixir("assets/build.css") }}">
