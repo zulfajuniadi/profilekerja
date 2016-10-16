@@ -133,10 +133,10 @@
                 <div class="col-md-10">
                     <div class="row" ng-repeat="tasks in duty.tasks | chunk:4">
                         <div class="col-md-3" ng-repeat="task in tasks | filter: { name: search }">
-                            <div ui-sref="task({occupation_slug: occupation.slug, task_slug: task.slug})" class="panel clickable ripple" ng-class="{'panel-info': (task.level.level == 'L1'),'panel-warning': (task.level.level == 'L2'),'panel-danger': (task.level.level == 'L3')}">
+                            <div ui-sref="task({occupation_slug: occupation.slug, task_slug: task.slug})" class="panel" ng-class="{'panel-info': (task.level.level == 'L1'),'panel-warning': (task.level.level == 'L2'),'panel-danger': (['L3', 'L4', 'L5', 'L6', 'L7'].indexOf(task.level.level) > -1)}">
                                 <div class="panel-heading">
                                     @{{task.code}}
-                                    <span class="label pull-right" ng-class="{'label-info': (task.level.level == 'L1'),'label-warning': (task.level.level == 'L2'),'label-danger': (task.level.level == 'L3')}">
+                                    <span class="label pull-right" ng-class="{'label-info': (task.level.level == 'L1'),'label-warning': (task.level.level == 'L2'),'label-danger': (['L3', 'L4', 'L5', 'L6', 'L7'].indexOf(task.level.level) > -1)}">
                                         @{{task.level.level}}
                                     </span>
                                 </div>

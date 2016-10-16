@@ -48,6 +48,19 @@ class Occupation extends Model implements SluggableInterface
         return $this->hasMany(Level::class);
     }
 
+    public function scopeLevelOptions()
+    {
+        return [
+            'L1' => 'L1',
+            'L2' => 'L2',
+            'L3' => 'L3',
+            'L4' => 'L4',
+            'L5' => 'L5',
+            'L6' => 'L6',
+            'L7' => 'L7',
+        ];
+    }
+
     public static function boot()
     {
         parent::boot();
