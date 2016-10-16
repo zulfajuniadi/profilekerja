@@ -216,7 +216,8 @@
             }
             return cacheIt(chunk);
         })
-        .config(function($stateProvider, $urlRouterProvider){
+        .config(function($stateProvider, $urlRouterProvider, $httpProvider){
+            $httpProvider.defaults.cache = true;
             $stateProvider.state('occupations', {
                 url: '/occupations',
                 templateUrl: 'occupations.html',
