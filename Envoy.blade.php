@@ -5,14 +5,11 @@
     git checkout production
     git merge master
     git push
-@endtask
-
-@task('branchmaster', ['on' => 'local'])
-    git checkout master
-    git merge production
-    git push
-    cd /private/var/www/cloudhrd.dev/web/app
 @endtask --}}
+
+ @task('push', ['on' => 'local'])
+    git push
+@endtask
 
 @task('deploylive', ['on' => 'web'])
     cd /var/www/profilekerja.com
@@ -20,7 +17,7 @@
 @endtask
 
 @macro('deploy')
-    {{-- branchproduction --}}
+    push
     deploylive
     {{-- branchmaster --}}
 @endmacro
