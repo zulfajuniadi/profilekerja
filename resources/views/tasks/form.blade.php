@@ -1,5 +1,5 @@
 {!! Former::select('level_id')
-    ->options(\App\Level::options())
+    ->options(\App\Level::options($duty))
     ->label('tasks.level_id')
     ->required() !!}
 {!! Former::text('code')

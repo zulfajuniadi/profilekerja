@@ -39,9 +39,9 @@ class Level extends Model implements SluggableInterface
         ];
     }
 
-    public function scopeOptions()
+    public function scopeOptions($query, $duty)
     {
-        return static::orderBy('level')->get()->reduce(function ($last, $level) {
+        return $duty->occupation->levels()->orderBy('level')->get()->reduce(function ($last, $level) {
             $last[$level->id] = $level->level . ' - ' . $level->name;
             return $last;
         }, []);
